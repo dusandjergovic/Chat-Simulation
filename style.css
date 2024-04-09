@@ -23,27 +23,47 @@ section {
     background-color: white;
     padding: 1rem;
     display: flex;
+    /* flex-direction: column; */
     align-items: center;
     justify-content: space-between;
+    gap: 1rem;
     width: 100%;
 }
 
-#chatLeft {
+#containerChatLeft {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    margin-top: 15%;
+}
+
+#containerChatRight {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 50%;
+    /* border: 1px solid red; */
+    margin-top: -15%;
+}
+
+.chatLeft {
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: center;
-    width: 50%;
     padding: 1rem;
+    border: 1px solid red;
+    width: 100%;
 } 
-#chatRight {
-    margin-top: -2rem;
+.chatRight {
+    border: 1px solid red;
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-items: center;
-    width: 50%;
     padding: 1rem;
+    width: 100%;
 }
 
 #send {

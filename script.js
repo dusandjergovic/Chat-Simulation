@@ -1,7 +1,3 @@
-// document.querySelector("#btn").addEventListener('click', function() {
-//     let dugme = document.querySelector("#userInputedText");
-//     console.log(dugme);
-// })
 
 $(document).ready(function() {
 
@@ -13,13 +9,19 @@ $(document).ready(function() {
 
         if(isMessArived) {
             let textMessLeft = $("<p>");
+            let containerForMessLeft = $("<div>")
+            containerForMessLeft.addClass("chatLeft")
             textMessLeft.text(userInputText)
-            $("#chatLeft").append(textMessLeft)
+            containerForMessLeft.append(textMessLeft)
+            $("#containerChatLeft").append(containerForMessLeft)
             isMessArived = false
         } else {
             let textMessRight = $("<p>");
-            textMessRight.text(userInputText)
-            $("#chatRight").append(textMessRight)
+            let containerForMessRight = $("<div>")
+            containerForMessRight.addClass("chatRight")
+            textMessRight.text(userInputText);
+            containerForMessRight.append(textMessRight)
+            $("#containerChatRight").append(containerForMessRight)
             isMessArived = true
         }
 
